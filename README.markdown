@@ -1,26 +1,32 @@
 ## Ember-Select
 
-### Usage
-  
-  ./app.coffee
-  ```
-  App.FiltersController = Em.ArrayController.extend
-    selected: 'all'
-    content: [
-      'all'
-      'completed'
-      'uncompleted'
-    ]
+Usage
+-------
 
-  App.FilterItemView = require "ember-select"
+./app.coffee
+```
+App.FiltersController = Em.ArrayController.extend
+  selected: 'all'
+  content: [
+    'all'
+    'completed'
+    'uncompleted'
+  ]
 
-  App.FiltersView = Em.CollectionView.extend
-      tagName: "ul"
-      itemViewClass: App.FilterItemView
+App.FilterItemView = require "ember-select"
 
-  ```
+App.FiltersView = Em.CollectionView.extend
+    tagName: "ul"
+    itemViewClass: App.FilterItemView
 
-  ./index.handlebars
-  ```
-  {{collection App.FiltersView tagName="ul" contentBinding="App.router.filtersController.content" selectedBinding="App.router.filtersController.selected"}}
-  ```
+```
+
+./index.handlebars
+```
+{{
+  collection App.FiltersView
+  tagName="ul"
+  contentBinding="App.router.filtersController.content"
+  selectedBinding="App.router.filtersController.selected"
+}}
+```
