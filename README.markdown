@@ -1,9 +1,10 @@
-## Ember-Select
 
-Usage
--------
+  ![](https://dl.dropbox.com/u/30162278/ember-select.png)
 
-./app.coffee
+### Usage
+
+app.coffee
+
 ```
 App.FiltersController = Em.ArrayController.extend
   selected: 'all'
@@ -21,7 +22,8 @@ App.FiltersView = Em.CollectionView.extend
 
 ```
 
-./index.handlebars
+index.handlebars
+
 ```
 {{
   collection App.FiltersView
