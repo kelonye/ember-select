@@ -1,0 +1,19 @@
+{
+  "name": "ember-select",
+  "repo": "kelonye/select",
+  "version": "latest",
+  "description": "Selection helper component",
+  "dependencies": {
+    "component/jquery": "*",
+    "kelonye/handlebars.js": "*",
+    "kelonye/ember.js": "*"
+  },
+  "keywords": [
+    "ember",
+    "emberjs",
+    "select"
+  ],
+  "scripts": [
+    "index.js"
+  ]
+}
