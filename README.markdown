@@ -7,11 +7,10 @@ app.coffee
 
 ```
 App.FiltersController = Em.ArrayController.extend
-  selected: 'all'
+  selected: 'Our Services'
   content: [
-    'all'
-    'completed'
-    'uncompleted'
+    'Our Services'
+    'About Us'
   ]
 
 App.FilterItemView = require "ember-select"
