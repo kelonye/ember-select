@@ -5,22 +5,23 @@
 
   See [demo](http://kelonye.github.com/ember-select)
 
-  app.coffee
+  index.js
 
   ```
-  App.ListController = Em.ArrayController.extend
-    selected: 'Our Services'
+  App.ListController = Em.ArrayController.extend({
+    selected: 'Our Services',
     content: [
-      'Our Services'
+      'Our Services',
       'About Us'
     ]
-  App.ListView = Em.CollectionView.extend
-      tagName: "ul"
-      itemViewClass: require("ember-select").extend()
-
+  });
+  App.ListView = Em.CollectionView.extend({
+    tagName: "ul",
+    itemViewClass: require("ember-select").extend()
+  });
   ```
 
-  index.handlebars
+  template.handlebars
 
   ```
   {{
