@@ -14,12 +14,9 @@
       'Our Services'
       'About Us'
     ]
-
-  App.FilterItemView = require "ember-select"
-
   App.ListView = Em.CollectionView.extend
       tagName: "ul"
-      itemViewClass: App.FilterItemView
+      itemViewClass: require("ember-select").extend()
 
   ```
 
