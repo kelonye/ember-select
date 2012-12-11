@@ -9,10 +9,12 @@
 
   ```
   App.ListController = Em.ArrayController.extend({
-    selected: 'Our Services',
+    selected: "ember",
     content: [
-      'Our Services',
-      'About Us'
+        "ember",
+        "redis",
+        "express",
+        "mocha"
     ]
   });
   App.ListView = Em.CollectionView.extend({
