@@ -1,8 +1,9 @@
 {
   "name": "ember-select",
   "repo": "kelonye/select",
-  "version": "latest",
-  "description": "Selection helper component",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Selection view",
   "dependencies": {
     "component/jquery": "*",
     "kelonye/handlebars.js": "*",

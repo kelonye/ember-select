@@ -1,12 +1,7 @@
-COFFEE = $(shell find -name "*.coffee")
-JS = $(COFFEE:.coffee=.js)
-
-build:	$(JS)
-
-%.js: %.coffee
-	coffee -bc $^
+index.js: index.coffee
+	coffee -bc $<
 
 clean:
-	rm -rf $(JS)
+	rm -rf index.js
 
 .PHONY: clean
