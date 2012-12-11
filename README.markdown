@@ -8,7 +8,7 @@
   app.coffee
 
   ```
-  App.FiltersController = Em.ArrayController.extend
+  App.ListController = Em.ArrayController.extend
     selected: 'Our Services'
     content: [
       'Our Services'
@@ -17,7 +17,7 @@
 
   App.FilterItemView = require "ember-select"
 
-  App.FiltersView = Em.CollectionView.extend
+  App.ListView = Em.CollectionView.extend
       tagName: "ul"
       itemViewClass: App.FilterItemView
 
@@ -27,9 +27,9 @@
 
   ```
   {{
-    collection App.FiltersView
+    collection App.ListView
     tagName="ul"
-    contentBinding="App.router.filtersController.content"
-    selectedBinding="App.router.filtersController.selected"
+    contentBinding="App.router.listController.content"
+    selectedBinding="App.router.listController.selected"
   }}
   ```
