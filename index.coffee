@@ -19,7 +19,7 @@ module.exports = Em.View.extend
 
     if content is selected
       true
-    if checked.contains content
+    else if checked?.contains content
       true
 
   ).property "parentView.selected", "parentView.checked.length"
@@ -31,7 +31,7 @@ module.exports = Em.View.extend
     
     set @, "parentView.selected", content
 
-    if content in checked
+    if content in checked?
       checked.removeObject content
     else 
-      checked.pushObject content
+      checked?.pushObject content

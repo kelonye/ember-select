@@ -1,35 +1,41 @@
 
-  ![](https://dl.dropbox.com/u/30162278/ember-select.png)
+![](https://dl.dropbox.com/u/30162278/ember-select.png)
 
-### Usage
+Usage
+-------
 
-  See [demo](http://kelonye.github.com/ember-select)
+See [demo](http://kelonye.github.com/ember-select)
 
-  index.js
+javascript
 
-  ```
-  App.ListController = Em.ArrayController.extend({
-    selected: "ember",
-    content: [
-        "ember",
-        "redis",
-        "express",
-        "mocha"
-    ]
-  });
-  App.ListView = Em.CollectionView.extend({
-    tagName: "ul",
-    itemViewClass: require("ember-select").extend()
-  });
-  ```
+```
+App.ListController = Em.ArrayController.extend({
+  selected: "ember",
+  content: [
+      "ember",
+      "redis",
+      "express",
+      "mocha"
+  ]
+});
+App.ListView = Em.CollectionView.extend({
+  tagName: "ul",
+  itemViewClass: require("ember-select").extend()
+});
+```
 
-  template.handlebars
+handlebars
 
-  ```
-  {{
-    collection App.ListView
-    tagName="ul"
-    contentBinding="App.router.listController.content"
-    selectedBinding="App.router.listController.selected"
-  }}
-  ```
+```
+{{
+  collection App.ListView
+  tagName="ul"
+  contentBinding="App.router.listController.content"
+  selectedBinding="App.router.listController.selected"
+}}
+```
+
+License
+-------------
+
+MIT

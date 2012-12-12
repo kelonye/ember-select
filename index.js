@@ -16,9 +16,8 @@ module.exports = Em.View.extend({
     selected = get(this, "parentView.selected");
     checked = get(this, "parentView.checked");
     if (content === selected) {
-      true;
-    }
-    if (checked.contains(content)) {
+      return true;
+    } else if (checked != null ? checked.contains(content) : void 0) {
       return true;
     }
   }).property("parentView.selected", "parentView.checked.length"),
@@ -28,10 +27,10 @@ module.exports = Em.View.extend({
     selected = get(this, "parentView.selected");
     checked = get(this, "parentView.checked");
     set(this, "parentView.selected", content);
-    if (__indexOf.call(checked, content) >= 0) {
+    if (__indexOf.call(checked != null, content) >= 0) {
       return checked.removeObject(content);
     } else {
-      return checked.pushObject(content);
+      return checked != null ? checked.pushObject(content) : void 0;
     }
   }
 });
