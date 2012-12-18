@@ -15,6 +15,8 @@
     "select"
   ],
   "scripts": [
+    "lib/templates/index.js",
+    "lib/index.js",
     "index.js"
   ]
 }
