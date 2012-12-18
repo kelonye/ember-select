@@ -4,7 +4,7 @@
 Usage
 -------
 
-See [demo](http://kelonye.github.com/ember-select)
+See [demo](http://kelonye.github.com/#/pages/select)
 
 javascript
 
