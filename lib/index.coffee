@@ -2,7 +2,7 @@
 get = Em.get
 set = Em.set
 
-module.exports = Em.View.extend
+module.exports = Em.Mixin.create
 
   tagName: "li"
   classNameBindings: ["active"]
