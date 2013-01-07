@@ -1,8 +1,13 @@
 
 ![](https://dl.dropbox.com/u/30162278/ember-select.png)
 
+Install
+---
+
+```component install kelonye/ember-select```
+
 Usage
--------
+---
 
 See [demo](http://kelonye.github.com/#/pages/select)
 
@@ -36,6 +41,6 @@ handlebars
 ```
 
 License
--------------
+---
 
 MIT

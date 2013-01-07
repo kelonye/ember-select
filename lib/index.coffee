@@ -4,30 +4,30 @@ set = Em.set
 
 module.exports = Em.Mixin.create
 
-  tagName: "li"
-  classNameBindings: ["active"]
+  tagName: 'li'
+  classNameBindings: ['active']
 
-  template: Em.Handlebars.compile require "./templates"
+  template: Em.Handlebars.compile require './template'
 
   active: (->
 
-    content = get @, "content"
-    selected = get @, "parentView.selected"
-    checked = get @, "parentView.checked"
+    content = get @, 'content'
+    selected = get @, 'parentView.selected'
+    checked = get @, 'parentView.checked'
 
     if content is selected
       true
     else if checked?.contains content
       true
 
-  ).property "parentView.selected", "parentView.checked.length"
+  ).property 'parentView.selected', 'parentView.checked.length'
 
   click: ->
-    content = get @, "content"
-    selected = get @, "parentView.selected"
-    checked = get @, "parentView.checked"
+    content = get @, 'content'
+    selected = get @, 'parentView.selected'
+    checked = get @, 'parentView.checked'
     
-    set @, "parentView.selected", content
+    set @, 'parentView.selected', content
 
     if content in checked?
       checked.removeObject content

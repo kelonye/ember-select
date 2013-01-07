@@ -7,6 +7,6 @@
     "stylus": "*",
     "jade": "*",
     "coffee-script": "*",
-    "component": "*"
+    "jade": "*"
   }
 }

@@ -5,9 +5,7 @@
   "license": "MIT",
   "description": "Selection view",
   "dependencies": {
-    "component/jquery": "*",
-    "kelonye/handlebars.js": "*",
-    "kelonye/ember.js": "*"
+    "kelonye/ember": "*"
   },
   "keywords": [
     "ember",
@@ -15,7 +13,7 @@
     "select"
   ],
   "scripts": [
-    "lib/templates/index.js",
+    "lib/template.js",
     "lib/index.js",
     "index.js"
   ]
