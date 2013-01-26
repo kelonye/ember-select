@@ -7,8 +7,6 @@ module.exports = Em.Mixin.create
   tagName: 'li'
   classNameBindings: ['active']
 
-  template: Em.Handlebars.compile require './template'
-
   active: (->
 
     content = get @, 'content'
@@ -33,3 +31,5 @@ module.exports = Em.Mixin.create
       checked.removeObject content
     else 
       checked?.pushObject content
+
+  template: Em.Handlebars.compile require('./template')
