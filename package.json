@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Selection view",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "stylus": "*",
     "jade": "*",
     "coffee-script": "*",
