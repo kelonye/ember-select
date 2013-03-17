@@ -1,27 +1,21 @@
-JADE = $(shell find lib -name "*.jade")
-HTML = $(JADE:.jade=.js)
+all: node_modules lib lib/index.js lib/template.js
 
-COFFEE 	= $(shell find lib -name "*.coffee") index.coffee
-JS 			= $(COFFEE:.coffee=.js)
+node_modules: package.json
+	@npm install
 
-STYL 	= $(shell find lib -name "*.styl")
-CSS 	= $(STYL:.styl=.css)
+lib:
+	@mkdir -p lib
 
-build: $(HTML) $(CSS) $(JS)
+lib/index.js: src/index.coffee
+	coffee -bcj $@ $<
 
-%.css: %.styl
-	stylus -u nib $<
-
-%.html: %.jade
+lib/template.html: src/template.jade
 	jade -P < $< --path $< > $@
 
-%.js: %.html
+lib/template.js: lib/template.html
 	component convert $<
 
-%.js: %.coffee
-	coffee -bc $<
-
 clean:
-	rm -rf $(HTML) $(CSS) $(JS)
+	@rm -rf lib
 
 .PHONY: clean

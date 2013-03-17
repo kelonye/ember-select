@@ -4,8 +4,7 @@
   "description": "Selection view",
   "license": "MIT",
   "devDependencies": {
-    "stylus": "*",
-    "jade": "*",
+    "component": "*",
     "coffee-script": "*",
     "jade": "*"
   }
