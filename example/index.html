@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      li{
+        list-style: none;
+      }
+      li a{
+        text-decoration: none;
+        color: #999;
+      }
+      li.active a{
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <script src='../public/public.js'></script>
+    <script data-template-name='index' type='text/x-handlebars'>
+      <ul>
+      {{#each model}}
+      {{view App.SelectView contentBinding='this'}}
+      {{/each}}
+      </ul>
+    </script>
+    <script type='text/javascript'>
+      var select = require('ember-select');
+      App = Em.Application.create();
+      App.SelectView = Em.View.extend(select);
+      App.IndexRoute = Em.Route.extend({
+        model: function(){
+          return ['TJ', 'Guille', 'N8', 'Mojombo', 'IZS'];
+        }
+      });
+    </script>
+  </body>
+</html>

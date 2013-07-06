@@ -1,20 +1,13 @@
 {
   "name": "ember-select",
-  "repo": "kelonye/ember-select",
   "version": "0.0.1",
-  "license": "MIT",
   "description": "Selection view",
   "dependencies": {
     "kelonye/ember": "*"
   },
-  "keywords": [
-    "ember",
-    "emberjs",
-    "select"
-  ],
+  "main": "lib/index.js",
   "scripts": [
-    "lib/template.js",
-    "lib/index.js",
-    "index.js"
-  ]
+    "lib/index.js"
+  ],
+  "license": "MIT"
 }

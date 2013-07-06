@@ -9,11 +9,7 @@ Install
 Usage
 ---
 
-See [demo](http://kelonye.github.com/#/pages/select)
-
-javascript
-
-```
+```javascript
 App.ListController = Em.ArrayController.extend({
   selected: "ember",
   content: [
@@ -39,6 +35,11 @@ handlebars
   selectedBinding="App.router.listController.selected"
 }}
 ```
+
+Example
+---
+
+    $ make example
 
 License
 ---
