@@ -21,7 +21,7 @@ App.ListController = Em.ArrayController.extend({
 });
 App.ListView = Em.CollectionView.extend({
   tagName: "ul",
-  itemViewClass: require("ember-select").extend()
+  itemViewClass: Em.View.extend(require("ember-select"))
 });
 ```
 
@@ -30,9 +30,8 @@ handlebars
 ```
 {{
   collection App.ListView
-  tagName="ul"
-  contentBinding="App.router.listController.content"
-  selectedBinding="App.router.listController.selected"
+  contentBinding="controller.content"
+  selectedBinding="controller.selected"
 }}
 ```
 
