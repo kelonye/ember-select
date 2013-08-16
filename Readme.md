@@ -4,7 +4,7 @@
 Install
 ---
 
-```component install kelonye/ember-select```
+    $ component install kelonye/ember-select
 
 Usage
 ---
