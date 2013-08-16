@@ -6,35 +6,6 @@ Install
 
     $ component install kelonye/ember-select
 
-Usage
----
-
-```javascript
-App.ListController = Em.ArrayController.extend({
-  selected: "ember",
-  content: [
-      "ember",
-      "redis",
-      "express",
-      "mocha"
-  ]
-});
-App.ListView = Em.CollectionView.extend({
-  tagName: "ul",
-  itemViewClass: Em.View.extend(require("ember-select"))
-});
-```
-
-handlebars
-
-```
-{{
-  collection App.ListView
-  contentBinding="controller.content"
-  selectedBinding="controller.selected"
-}}
-```
-
 Example
 ---
 

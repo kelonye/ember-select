@@ -4,12 +4,14 @@
     <style>
       li{
         list-style: none;
+        font-size: 20px;
       }
-      li a{
+      li{
         text-decoration: none;
-        color: #999;
+        color: #444;
+        cursor: pointer;
       }
-      li.active a{
+      li.active{
         color: rgba(46, 160, 24, 1);
       }
     </style>
@@ -18,18 +20,26 @@
     <script src='../public/public.js'></script>
     <script data-template-name='index' type='text/x-handlebars'>
       <ul>
-      {{#each model}}
-      {{view App.SelectView contentBinding='this'}}
+      {{#each controller}}
+      {{#view App.SelectView contentBinding='this'}}
+      {{view.content}}
+      {{/view}}
       {{/each}}
       </ul>
     </script>
     <script type='text/javascript'>
       var select = require('ember-select');
       App = Em.Application.create();
-      App.SelectView = Em.View.extend(select);
+      App.SelectView = Em.View.extend(select, {
+        tagName: 'li'
+      });
       App.IndexRoute = Em.Route.extend({
         model: function(){
-          return ['TJ', 'Guille', 'N8', 'Mojombo', 'IZS'];
+          return ['TJ', 'Guille', 'N8', 'Mojombo', 'Izs'];
+        },
+        setupController: function(controller, model){
+          this._super(controller, model);
+          controller.set('selected', 'TJ');
         }
       });
     </script>
