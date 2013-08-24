@@ -21,9 +21,7 @@
     <script data-template-name='index' type='text/x-handlebars'>
       <ul>
       {{#each controller}}
-      {{#view App.SelectView contentBinding='this'}}
-      {{view.content}}
-      {{/view}}
+      {{view App.SelectView contentBinding='this'}}
       {{/each}}
       </ul>
     </script>
@@ -31,7 +29,8 @@
       var select = require('ember-select');
       App = Em.Application.create();
       App.SelectView = Em.View.extend(select, {
-        tagName: 'li'
+        tagName: 'li',
+        template: Em.Handlebars.compile('{{view.content}}')
       });
       App.IndexRoute = Em.Route.extend({
         model: function(){
