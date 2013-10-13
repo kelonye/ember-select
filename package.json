@@ -4,8 +4,6 @@
   "description": "Selection view",
   "license": "MIT",
   "devDependencies": {
-    "component": "*",
-    "coffee-script": "*",
-    "jade": "*"
+    "component-hooks": "*"
   }
 }
