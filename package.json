@@ -1,9 +1,9 @@
 {
   "name": "ember-select",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Selection view",
   "license": "MIT",
   "devDependencies": {
-    "component-hooks": "0.1.7"
+    "component-hooks": "0.2.2"
   }
 }
