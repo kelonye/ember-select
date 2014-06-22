@@ -21,7 +21,9 @@
     <script data-template-name='index' type='text/x-handlebars'>
       <ul>
       {{#each item in model}}
-      {{view App.SelectView itemBinding='item' itemsBinding='model'}}
+      {{#view App.SelectView itemBinding='item' itemsBinding='model'}}
+      {{item.name}}
+      {{/view}}
       {{/each}}
       </ul>
     </script>
@@ -30,15 +32,26 @@
       App = Em.Application.create();
       App.SelectView = Em.View.extend(select, {
         tagName: 'li',
-        template: Em.Handlebars.compile('{{view.item}}')
+        optionSelectPath: 'name'
       });
       App.IndexRoute = Em.Route.extend({
         model: function(){
-          return ['TJ', 'Guille', 'N8', 'Mojombo', 'Izs', 'Substack'];
+          return [
+            'TJ',
+            'Guille',
+            'N8',
+            'Mojombo',
+            'Izs',
+            'Substack'
+          ].map(function(name){
+            return {
+              name: name
+            }
+          });
         },
         setupController: function(controller, model){
           this._super(controller, model);
-          model.set('selected', 'N8');
+          model.set('selected', model[2]);
         }
       });
     </script>
