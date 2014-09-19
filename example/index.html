@@ -21,7 +21,7 @@
     <script data-template-name='index' type='text/x-handlebars'>
       <ul>
       {{#each item in model}}
-      {{#view App.SelectView itemBinding='item' itemsBinding='model'}}
+      {{#view App.SelectView value=item selected=controller.selected}}
       {{item.name}}
       {{/view}}
       {{/each}}
@@ -51,7 +51,7 @@
         },
         setupController: function(controller, model){
           this._super(controller, model);
-          model.set('selected', model[2]);
+          controller.set('selected', model[2]);
         }
       });
     </script>
