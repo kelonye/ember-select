@@ -32,7 +32,12 @@
       App = Em.Application.create();
       App.SelectView = Em.View.extend(select, {
         tagName: 'li',
-        optionSelectPath: 'name'
+        optionSelectPath: 'name',
+        actions: {
+          onselect: function(){
+            console.log('on select');
+          },
+        },
       });
       App.IndexRoute = Em.Route.extend({
         model: function(){
