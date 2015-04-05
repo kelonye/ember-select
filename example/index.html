@@ -21,16 +21,16 @@
     <script data-template-name='index' type='text/x-handlebars'>
       <ul>
       {{#each item in model}}
-      {{#view App.SelectView value=item selected=controller.selected}}
+      {{#menu-item value=item selected=controller.selected}}
       {{item.name}}
-      {{/view}}
+      {{/menu-item}}
       {{/each}}
       </ul>
     </script>
     <script type='text/javascript'>
       var select = require('ember-select');
       App = Em.Application.create();
-      App.SelectView = Em.View.extend(select, {
+      App.MenuItemComponent = Em.Component.extend(select, {
         tagName: 'li',
         optionSelectPath: 'name',
         actions: {
