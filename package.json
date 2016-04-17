@@ -2,6 +2,9 @@
   "name": "ember-select",
   "private": true,
   "devDependencies": {
-    "component-hooks": "0.2.7"
+    "component-hooks": "0.4.0"
+  },
+  "dependencies": {
+    "component-hooks": "^0.4.0"
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "ember-select",
-  "version": "0.0.6",
+  "version": "2.5.0",
   "description": "Selection view",
   "dependencies": {
-    "kelonye/ember": "1.9.1"
+    "kelonye/ember": "2.5.0"
   },
   "main": "lib/index.js",
   "scripts": [
