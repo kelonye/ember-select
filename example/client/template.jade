@@ -1,0 +1,6 @@
+ul
+  {{#each model as |item|}}
+  {{#menu-item value=item selected=selected}}
+  {{item.name}}
+  {{/menu-item}}
+  {{/each}}
